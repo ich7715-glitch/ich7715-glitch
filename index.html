@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>아이폰17 사전예약 카운트</title>
+  <title>아이폰17 출시 카운트</title>
   <meta name="theme-color" content="#0b0b0c">
   <style>
     :root{
@@ -73,8 +73,8 @@
 <body>
   <canvas id="confetti"></canvas>
   <main class="card" role="main" aria-live="polite">
-    <h1 id="title">아이폰17 사전예약 카운트</h1>
-    <p id="sub" class="sub">사전예약 시작까지 남은 시간</p>
+    <h1 id="title">아이폰17 출시 카운트</h1>
+    <p id="sub" class="sub">출시까지 남은 시간</p>
     <section class="timer" aria-label="카운트다운 타이머">
       <div class="seg"><div id="d" class="num">00</div><div class="label">일</div></div>
       <div class="seg"><div id="h" class="num">00</div><div class="label">시간</div></div>
@@ -89,10 +89,10 @@
   </main>
   <!-- ===== 설정 =====
     사전예약 시작 시각(KST)과 CTA 링크를 수정하세요.
-    예: '2025-09-12T00:00:00+09:00'
+    예: '2025-09-09T00:00:00+09:00'
   =================== -->
   <script>
-    const startAt = '2025-09-12T00:00:00+09:00'; // START 시각 (KST)
+    const startAt = '2025-09-09T00:00:00+09:00'; // START 시각 (KST)
     const ctaLink = 'https://simte.xyz/AI'; // 사전예약 및 무료상담
     document.getElementById('cta').href = ctaLink;
 
@@ -116,9 +116,9 @@
       }
       if (diff <= 0){
         dEl.textContent = '00'; hEl.textContent = '00'; mEl.textContent = '00'; sEl.textContent = '00';
-        titleEl.textContent = '아이폰17 사전예약 START!';
+        titleEl.textContent = '아이폰17 출시 START!';
         subEl.outerHTML = '<div class="started">지금 바로 접수하세요</div>';
-        stateEl.textContent = '사전예약이 시작되었습니다.';
+        stateEl.textContent = '아이폰17이 출시 되었습니다.';
         launchConfetti();
         return; // 시작 시 한 번만 축포
       }
